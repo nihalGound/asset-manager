@@ -46,6 +46,7 @@ userSchema.methods.comparePassword = async function (
 
 const metadataSchema = new Schema({
   name: { type: String, required: true },
+  s3Key: { type: String, required: true,unique:true },
   size: { type: Number, required: true },
   thumbnail: { type: String, required: true },
   original: { type: String, required: true },
